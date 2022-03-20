@@ -1,0 +1,156 @@
+.container {
+    height: 600px;
+    width: 500px;
+    padding-top: 60px;
+}
+
+.container2 {
+    height: 600px;
+    width: 500px;
+}
+
+.headbar {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Rubik', sans-serif;
+    align-items: center;
+    font-size: 18px;
+    position: fixed;
+    background-color: white;
+    height: 60px;
+    top: 0;
+    width: 500px;
+}
+
+.left {
+    width: 40px;
+    height: 40px;
+}
+
+.more {
+    width: 30px;
+    height: 30px;
+}
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 13px;
+}
+
+.photo {
+    height: 120px;
+    width: 120px;
+    border-radius: 70px;
+}
+
+.numbers {
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: -10px;
+}
+
+.number {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 100px;
+}
+
+.infonum {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+.introduce {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 17px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 13px;
+}
+
+.name {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.follow {
+    padding: 6px 80px 6px 80px;
+    border-radius: 5px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+}
+
+.message {
+    padding: 6px 80px 6px 80px;
+    border-radius: 5px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+}
+
+.plus {
+    padding: 5px 8px 5px 8px;
+    border-radius: 5px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 30px;
+    background-color: white;
+    position: sticky;
+    top: 58px;
+}
+
+.icons img {
+    width: 30px;
+    height: 30px;
+}
+
+
+.container2 img {
+  width: 160px;
+  height: 160px;
+}
+
+.container2 {
+    margin-top: -290px;
+}
+
+.bottombar img {
+    width: 35px;
+    height: 35px;
+}
+
+.bottombar {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    background-color: white;
+    width: 500px;
+    height: 50px;
+    bottom: 0;
+    align-items: center;
+}
+
+.hamsterprofile {
+    border-radius: 20px;
+}
