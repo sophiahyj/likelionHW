@@ -1,0 +1,64 @@
+* {
+    background-color: #EAEAEA;
+}
+
+.title {
+    font-family: 'Jua', sans-serif;
+    font-size: 80px;
+    color: #1E3269;
+    text-align: center;
+    background-color: lightsteelblue;
+    margin-top: -10px;
+}
+
+.result {
+    font-family: 'Jua', sans-serif;
+    font-size: 80px;
+    color: #CC3D3D;
+    background-color: #FFD8D8;
+    text-align: center;
+    margin-top: 0px;
+}
+
+h4 {
+    font-family: 'Jua', sans-serif;
+    font-size: 40px;
+    color: #5D5D5D;
+    text-align: center;
+    margin-top: -30px;
+}
+
+textarea {
+    position: relative;
+    left: 20%;
+    border: 5px dashed black;
+    border-radius: 10px;
+    font-family: 'Noto Serif KR', serif;
+    font-size: 20px;
+    background-image: url('https://fixthephoto.com/images/content/paper-texture-11613661894.jpg');
+    background-size: 1000px;
+    margin-top: -30px;
+}
+
+.submit {
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 200px;
+    height: 80px;
+    position: relative;
+    left: 45%;
+    margin-top: 30px;
+    font-family: 'Jua', sans-serif;
+    font-size: 45px;
+    text-align: center;
+    color: #1E3269;
+    background-color: lightsteelblue;
+
+}
+
+li {
+    font-family: 'Jua', sans-serif;
+    font-size: 40px;
+    margin-top: 20px;
+    margin-left: 20px;
+}

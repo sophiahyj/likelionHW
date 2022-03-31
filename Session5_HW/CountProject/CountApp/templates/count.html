@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'count.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap" rel="stylesheet">
+    <title>count</title>
+</head>
+<body>
+    <h1 class="title">글자를 입력해 보세요!</h1>
+    <h4>맞춤법을 검사하는 기능은 없습니다♥</h4>
+    <form action="{% url 'result' %}" method="post">{%csrf_token %}
+        <textarea name="text" cols="80" rows="15"></textarea>
+        <br/>
+        <input type="submit" value="제출" class="submit" />
+    </form>
+</body>
+</html>

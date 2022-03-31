@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'count.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap" rel="stylesheet">
+    <title>result</title>
+</head>
+<body>
+    <input type='button' value='←' onClick="location.href='http://127.0.0.1:8000/count'" style="padding: 10px 50px 10px 50px;"/>
+    <h1 class="result">결과 보기♡</h1>
+    <li class="text">입력한 텍스트: {{text}}</li>
+    <li class="total_len">글자수: {{total_len}}</li>
+    <li class="no_blank_len">공백제외 글자수: {{no_blank_len}}</li>
+    <li class="text_len">단어개수: {{text_len}}</li>
+</body>
+</html>
