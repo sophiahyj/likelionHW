@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'new.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&family=Rubik+Puddles&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <h2 style="font-family: 'Rubik Puddles', cursive; font-size: 150px; text-align: center;">MY BLOG</h2>
+    <form action="/new" method="post">
+        {% csrf_token %}
+        <div>
+            <div class="title" style="font-family: 'Nanum Gothic', sans-serif; font-size: 20px;">글 제목</div>
+            <input type="text" name="title" />
+        </div>
+        <div>
+            <div style="font-family: 'Nanum Gothic', sans-serif; font-size: 20px; margin-top: 10px;">카테고리 설정</div>
+            <select name="category">
+                <option value="hobby" href="{% url 'hobby' %}">HOBBY</option>
+                <option value="food" href="{% url 'food' %}">FOOD</option>
+                <option value="programming" href="{% url 'programming' %}">PROGRAMMING</option>
+            </select>
+        </div>
+        <div>
+            <div style="font-family: 'Nanum Gothic', sans-serif; font-size: 20px; margin-top: 10px;">글 내용</div>
+            <textarea name="content" cols="80" rows="30"></textarea>
+        </div>
+        <button type="submit">작성 완료</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'list.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&family=Rubik+Puddles&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <h2 style="font-family: 'Nanum Gothic', sans-serif; font-size: 80px; margin-top: 10px; text-align: center;">글 전체 목록</h2>
+    <div>
+        <a href="{% url 'hobby' %}"  style="font-family: 'Nanum Gothic', sans-serif; font-size: 30px; margin-top: 10px; text-align: center;">HOBBY</a>
+    </div>
+
+    <div>
+        <a href="{% url 'food' %}"  style="font-family: 'Nanum Gothic', sans-serif; font-size: 30px; margin-top: 30px; text-align: center;">FOOD</a>
+    </div>
+
+    <div>
+        <a href="{% url 'programming' %}"  style="font-family: 'Nanum Gothic', sans-serif; font-size: 30px; text-align: center;">PROGRAMMING</a>
+    </div>
+    
+    <a href="{% url 'new' %}">글 쓰러 가기</a>
+</body>
+</html>

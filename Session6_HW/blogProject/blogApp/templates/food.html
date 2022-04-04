@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'new.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&family=Rubik+Puddles&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <h2 style="font-family: 'Rubik Puddles', cursive; font-size: 150px; text-align: center;">FOOD</h2>
+    {% for article in articles %}
+    <li>
+        <a href="{% url 'detail' article.id %}">{{article.title}}</a>
+    </li>
+    {% endfor %}
+</body>
+</html>
