@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'edit.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Gugi&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <a href="{% url 'home' %}">◀일정 전체보기</a>
+        <h2 class="name">수정하기</h2>
+        <h5>크리스탈...💎</h5>
+        <div class="container">
+            <div class="title">
+                <label for="title">🎠할 일</label>
+                <input type="text" name="title" id="title" value="{{day.title}}">
+            </div>
+            <div class="content">
+                <label for="content">🔎세부사항</label>
+                <input type="text" name="content" id="content" value="{{day.content}}">
+            </div>
+            <div class="date" style="margin-bottom: 50px;">
+                <label for="date">📓마감 기한</label>
+                <input type="date" name="date" id="date" value="{{day.date}}">
+            </div>
+        </div>
+        <button type="submit">수정하기</button>
+    </form>
+</body>
+</html>

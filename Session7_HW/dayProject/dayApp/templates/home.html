@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <h2>TODO LIST</h2>
+    <ul>
+        {% for day in days %}
+        <li style="margin-bottom: 50px;">
+            <div class="title">TITLE:</div>
+            <a href="{% url 'detail' day.pk %}" class="title_con">{{ day.title }}</a>
+            <div class="content">CONTENT:</div>
+            <div class="content_con">{{ day.content }}</div>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'new' %}" class="add">ADD</a>
+</body>
+</html>

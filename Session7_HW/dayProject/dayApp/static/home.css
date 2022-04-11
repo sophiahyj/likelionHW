@@ -1,0 +1,27 @@
+* {
+    background-color: #C6DEFF;
+}
+
+h2 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 100px;
+    text-align: center;
+    color: #357EC7;
+}
+
+.add {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 50px;
+}
+
+.title, .content {
+    font-family: 'Indie Flower', cursive;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.title_con, .content_con {
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: 20px;
+}
+

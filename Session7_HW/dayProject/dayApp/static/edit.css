@@ -1,0 +1,60 @@
+* {
+    background-color: #FBF6D9;
+}
+
+.name {
+    color: #E9AB17;
+    font-family: 'Gugi', cursive;
+    font-size: 100px;
+    text-align: center;
+    margin-top: -10px;
+}
+
+
+a {
+    font-family: 'Dongle', sans-serif;
+    font-size: 50px;
+    color: black;
+}
+
+h5 {
+    font-family: 'Dongle', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    color: #E9AB17;
+    margin-top: -70px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -50px;
+    border: 5px black solid;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    font-family: 'Dongle', sans-serif;
+    font-size: 50px;
+}
+
+.title, .content, .date {
+    font-family: 'Gugi', cursive;
+    font-size: 40px;
+}
+
+button {
+    font-family: 'Gugi', cursive;
+    font-size: 40px;
+    text-align: center;
+    color: #E9AB17;
+    border-radius: 30px;
+    margin: auto;
+    display: block;
+}
+
+input {
+    font-family: 'Dongle', sans-serif;
+    font-size: 50px;
+    color: #806517;
+    margin-top: 50px;
+}

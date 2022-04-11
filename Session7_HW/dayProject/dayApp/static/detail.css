@@ -1,0 +1,42 @@
+* {
+    background-color: #D1D0CE;
+}
+
+.name {
+    color: #504A4B;
+    font-family: 'Gugi', cursive;
+    font-size: 100px;
+    text-align: center;
+    margin-top: -10px;
+}
+
+h5 {
+    font-family: 'Dongle', sans-serif;
+    font-size: 60px;
+    text-align: center;
+    color: #504A4B;
+    margin-top: -70px;
+}
+
+a {
+    font-family: 'Dongle', sans-serif;
+    font-size: 50px;
+    color: black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -50px;
+    border: 5px black solid;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    font-family: 'Dongle', sans-serif;
+    font-size: 50px;
+}
+
+.title, .content, .date {
+    font-family: 'Gugi', cursive;
+    font-size: 40px;
+}

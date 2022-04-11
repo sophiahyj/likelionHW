@@ -1,0 +1,61 @@
+* {
+    background-color: #FDEEF4;
+}
+
+h2 {
+    font-family: 'Gugi', cursive;
+    font-size: 100px;
+    text-align: center;
+    color: #C25283;
+    margin-top: -10px;
+}
+
+h5 {
+    font-family: 'Dongle', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    color: #C25283;
+    margin-top: -70px;
+}
+
+.title, .content, .date {
+    font-family: 'Gugi', cursive;
+    font-size: 40px;
+    margin-top: 50px;
+}
+
+.date {
+    margin-bottom: 50px;
+}
+
+input {
+    font-family: 'Dongle', sans-serif;
+    font-size: 30px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -50px;
+    border: 5px black solid;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+a {
+    font-family: 'Dongle', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    color: black;
+}
+
+button {
+    font-family: 'Gugi', cursive;
+    font-size: 40px;
+    text-align: center;
+    color: #C25283;
+    border-radius: 30px;
+    margin: auto;
+    display: block;
+}

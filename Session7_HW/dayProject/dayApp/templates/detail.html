@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'detail.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Gugi&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <a href="{% url 'home' %}">◀일정 전체보기</a>
+    <h2 class="name">일정 자세히 보기</h2>
+    <h5>자세히 보아야 예쁘다... 일정도 그렇다</h5>
+    <div class="container">
+        <div>
+            <h2 class="title">🎠 할 일</h2>
+            <p>{{ day.title }}</p>
+        </div>
+        <div>
+            <h2 class="content">🔎 세부 사항</h2>
+            <p>{{ day.content }}</p>
+        </div>
+        <div>
+            <h2 class="date">😨 마감 기한</h2>
+            <p>{{ day.date }}</p>
+        </div>
+    </div>
+    <div class="buttons">
+        <a class="home" href="{% url 'home' %}">홈으로</a>
+        <a class="edit" href="{% url 'edit' day.pk %}">수정하기</a>
+        <a class="delete" href="{% url 'delete' day.pk %}">삭제하기</a>
+    </div>
+</body>
+</html>
