@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>컴퓨터학과 과목</h2>
+    <ol>
+        {% for subject in computerMajor %}
+        <li>
+            <span> {{ subject.subject_name }}</span>
+            <span> /{{ subject.major }}</span>
+            <span> /{{ subject.prof_name }}</span>
+
+            <a href="{% url 'editSubject' subject.pk %}">수정</a>
+            <a href="{% url 'deleteSubject' subject.pk %}">삭제</a>
+
+            <div> {{ subject.memo }}</div>
+
+
+        </li>
+
+        {% endfor %}
+    </ol>
+</body>
+</html>

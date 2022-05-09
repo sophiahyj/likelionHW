@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Gugi&family=Josefin+Sans&family=Koulen&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="bigcontainer">
+        <div class="container1">
+            <h2 class="major">MAJOR🔎</h2>
+            <a href="{% url 'addMajor' %}">ADD MAJOR</a>
+            <div class="majorinfo">
+                <ul style="font-size: 30px;">
+                    {% for major in majors %}
+                    <li>{{ major.name }}</li>
+                    <a href="{% url 'editMajor' major.pk %}">EDIT MAJOR</a>
+                    <a href="{% url 'deleteMajor' major.pk %}">DELETE MAJOR</a>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        
+        <div class="container2">
+            <h2 class="subject">SUBJECT📚</h2>
+            <a href="{% url 'addSubject' %}">ADD SUBJECT</a>
+            <div class="subjectinfo">
+                <ol>
+                    {% for subject in subjects %}
+                    <li style="margin-bottom: 50px;">
+                        <span> {{ subject.subject_name }}</span>
+                        <span> /{{ subject.major }}</span>
+                        <span> /{{ subject.prof_name }}</span>
+                        <div> {{ subject.memo }}</div>
+                    </li>
+                    {% endfor %}
+                </ol>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

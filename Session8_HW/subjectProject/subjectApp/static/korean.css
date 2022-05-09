@@ -1,0 +1,23 @@
+* {
+    background-color: #FFFAF0;
+}
+
+h2 {
+    font-family: 'Song Myung', serif;
+    font-size: 100px;
+    text-align: center;
+}
+
+.list {
+    font-family: 'Song Myung', serif;
+    font-size: 35px;
+    margin-left: 50px;
+}
+
+.memo {
+    margin-bottom: 50px;
+}
+
+.info {
+    margin-bottom: 20px;
+}
