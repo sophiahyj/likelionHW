@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    width: 100%;
+    background-color: #F0F8FF;
+}
+
+.title {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 70px;
+    font-family: 'Song Myung', serif;
+    margin-top: -50px;
+    color: #3B9C9C;
+}
+
+.button {
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Gowun Batang', serif;
+    font-size: 30px;
+    margin-top: 50px;
+    background-color: #D1D0CE;
+    width: 200px;
+    border-radius: 50px;
+    margin-bottom: 50px;
+}

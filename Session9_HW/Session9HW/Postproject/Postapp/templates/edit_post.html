@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'edit_post.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Song+Myung&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="title">
+        <h2>글 수정하기</h2>
+    </div>  
+        <form method="POST">
+            <div class="container">
+                {% csrf_token %}
+                <div class="posttitle">
+                    <label for="title" >제목</label>
+                    <input name="title" value="{{post.title}}">
+                </div>
+                <div class="postcontent">
+                    <label for="content" class="postcontent">내용</label>
+                    <textarea name="content">{{post.content}}</textarea>
+                </div>
+            </div>
+    <div class="button">
+        <button type="submit">수정</button>
+    </div>
+        </form>
+</body>
+</html>

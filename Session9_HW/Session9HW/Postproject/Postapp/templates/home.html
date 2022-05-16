@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Song+Myung&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="bigcontainer">
+
+        <div class="title">
+            <h2>게시판</h2>
+        </div>
+
+        <div class="container" style="margin-top:-50px;">
+            <div class="nopost">
+                {% if not posts %}
+                <a class="no_posts">게시물이 없습니다ㅠㅠ</a>
+                {% endif %}    
+            </div>
+        
+            <div class="forpost">
+                {% for post in posts %}
+                <a class="detail" href="{% url 'detail_page' post.pk %}">
+                    {{ post.title }}
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="button">
+            <a href="{% url 'create_post' %}">글 쓰러가기!</a>
+        </div>
+
+    </div>
+</body>
+</html>
