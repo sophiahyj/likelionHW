@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Song+Myung&display=swap" rel="stylesheet">
+    {% block css %}
+    {% endblock css %}
+    <title>Document</title>
+</head>
+<body>
+    <div class="title">
+        {% block title %}
+        {% endblock title %}
+    </div>
+
+    <div class="container" style="margin-top: -50px;">
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+    <div class="button">
+        {% block button %}
+        {% endblock %} 
+    </div>
+</body>
+</html>
