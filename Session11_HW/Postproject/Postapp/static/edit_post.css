@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    width: 100%;
+    background-color: #E9CFEC;
+}
+
+.title {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 70px;
+    font-family: 'Song Myung', serif;
+    margin-top: -50px;
+    color: #7A5DC7;
+}
+
+.container {
+    width: 600px;
+    height: 600px;
+    background-image: url(https://img.freepik.com/free-photo/crumpled-paper-background_34170-44.jpg);
+    margin: 0 auto;
+    border-radius: 40px;
+    border-style: solid;
+    border-color: #5C5858;
+    margin-top: -50px;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    font-family: 'Gowun Batang', serif;
+    font-size:20px;
+    margin-top: 550px;
+    margin-bottom: 50px;
+    margin-left: 250px;
+    border-radius:15px;
+    background-color: #D1D0CE;
+
+}
+
+.posttitle {
+    font-family: 'Gowun Batang', serif;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.postcontent {
+    font-family: 'Gowun Batang', serif;
+    font-size: 30px;
+    margin-left: 10px;
+}

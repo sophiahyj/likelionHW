@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+{% endblock css %}
+
+{% block title %}
+<h2>게시판</h2>
+{% endblock %}
+
+{% block content %}
+<div class="nopost">
+    {% if not posts %}
+    <a class="no_posts">게시물이 없습니다ㅠㅠ</a>
+    {% endif %}    
+</div>
+
+<div class="forpost">
+    {% for post in posts %}
+    <a class="detail" href="{% url 'detail_page' post.pk %}">
+        {{ post.title }}
+    </a>
+    {% endfor %}
+</div>
+{% endblock content %}
+
+{% block button %}
+<a href="{% url 'create_post' %}">글 쓰러가기!</a>
+{% endblock button %}

@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    width: 100%;
+    background-color: #FFF8DC;
+}
+
+.title {
+    color: #FBB917;
+}
+
+.container {
+    width: 600px;
+    height: 600px;
+    background-image: url(https://img.freepik.com/free-photo/crumpled-paper-background_34170-44.jpg);
+    margin: 0 auto;
+    border-radius: 40px;
+    border-style: solid;
+    border-color: #5C5858;
+    font-family: 'Gowun Batang', serif;
+}
+
+.button {
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Gowun Batang', serif;
+    font-size: 30px;
+    margin-top: 50px;
+    background-color: #D1D0CE;
+    width: 200px;
+    border-radius: 50px;
+    margin-bottom: 50px;
+}
+
+.posttitle {
+    font-size: 30px;
+    font-family: 'Gowun Batang', serif;
+
+}
+
+.postcontent {
+    font-size: 30px;
+    font-family: 'Gowun Batang', serif;
+}
+
+.titlecontent, .content2 {
+    font-family: 'Gowun Batang', serif;
+}
+
+.bigcontainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.POSTtitle, .POSTcontent {
+    margin-left: 20px;
+}
+
+.POSTcontent {
+    margin-top: 20px;
+}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'create_post.css' %}">
+{% endblock css %}
+
+{% block title %}
+<h2>새 글 쓰기</h2>
+{% endblock %}
+
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <div class="bigcontainer">
+        <div class="POSTtitle">
+            <label class="posttitle" for="title">제목</label>
+            <input class="titlecontent" id="title" name="title" placeholder="제목을 입력하세요.">
+        </div>
+    
+        <div class="POSTcontent">
+            <label class="postcontent" for="content">내용</label>
+            <textarea class="content2" id="content" name="content" placeholder="내용을 입력하세요.">
+            </textarea>
+        </div>
+    </div>
+{% endblock content %}
+
+{% block button %}
+    <button type="submit">작성</button>
+{% endblock button %}

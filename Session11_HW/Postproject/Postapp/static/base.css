@@ -1,0 +1,37 @@
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Song Myung', serif;
+    margin-right: 50px;
+    margin-left: 50px;
+    font-size: 20px;
+}
+
+.diary {
+    margin-bottom: 50px;
+}
+
+#navbar_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.title {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 70px;
+    font-family: 'Song Myung', serif;
+    margin-top: -50px;
+}
+
+.container {
+    width: 600px;
+    height: 600px;
+    background-image: url(https://img.freepik.com/free-photo/crumpled-paper-background_34170-44.jpg);
+    margin: 0 auto;
+    border-radius: 40px;
+    border-style: solid;
+    border-color: #5C5858;
+}

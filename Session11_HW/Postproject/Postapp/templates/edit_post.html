@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'edit_post.css' %}">
+{% endblock css %}
+
+{% block title %}
+<h2>글 수정하기</h2>
+{% endblock title %}
+
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+    <div class="posttitle">
+        <label for="title" >제목</label>
+        <input name="title" value="{{post.title}}">
+    </div>
+    <div class="postcontent">
+        <label for="content" class="postcontent">내용</label>
+        <textarea name="content">{{post.content}}</textarea>
+{% endblock content %}
+
+{% block button %}
+    <button type="submit">수정</button>
+{% endblock button %}
