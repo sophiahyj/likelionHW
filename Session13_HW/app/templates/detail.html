@@ -1,0 +1,102 @@
+{% extends 'base.html' %} {% block content %}
+<div>
+  <div>
+    <div class="post_title">{{ post.title }}</div>
+    <div class="post_content">{{ post.content }}</div>
+  </div>
+  <a href="{% url 'home' %}">홈으로</a>
+
+  {% if user.is_authenticated and post.author.pk == user.pk %}
+  <a href="{% url 'edit' post.pk %}">수정하기</a>
+  <a href="{% url 'delete' post.pk %}">삭제하기</a>
+  {% endif %} {% for comment in post.comments.all %}
+  <li>{{ comment.content }}</li>
+  {% if user.is_authenticated and comment.author.pk == user.pk %}
+  <a href="{% url 'delete_comment' post.pk comment.pk %}">댓글삭제</a>
+  {% endif %} {% endfor %} {% if user.is_authenticated %}
+  <form method="POST">
+    {% csrf_token %}
+    <input type="text" name="content" placeholder="댓글을 입력하세요" />
+    <button type="submit">댓글 쓰기</button>
+  </form>
+
+  <button id="like-button">좋아요</button>
+  {% endif %}
+  
+  <div id="like-count">좋아요 {{post.likes.count}}개</div>
+
+  <button id="scrap-button">스크랩</button>
+  {% if user.is_authenticated and post.author.pk == user.pk %}
+  <div id="scrap-count">스크랩 {{post.scraps.count}}개</div>
+  {% endif %}
+
+</div>
+
+<script>
+  const likeBtn = document.getElementById('like-button')
+
+  likeBtn.onclick = () => {
+    alert('좋아요 버튼이 눌렸어요')
+    console.log(likeBtn.style.color);
+    // if (likeBtn.onclick.count == 1 ) {
+    //   likeBtn.style.color = "red";
+    // } else {
+    //   likeBtn.style.color = "black";
+    // }
+    like()
+    // pushlike()
+  }
+
+  // const pushlike = () => {
+  //   if (likeBtn.style.color = 'black') {
+  //     likeBtn.style.color = 'red';
+  //   } else {
+  //     likeBtn.style.color = 'black';
+  //   }
+  // }
+  // </script>
+
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script>
+  const like=() => {
+    axios('/like', {
+      method:"POST",
+      data: {post_pk:"{{post.pk}}"}
+    })
+    .then(res => {document.getElementById("like-count").innerHTML = "좋아요" + res.data.like_count + '개'
+      if (res.data.existing_like == 0) {document.getElementById("like-button").style.color = "black";
+    } else {
+      document.getElementById("like-button").style.color = "red";}
+})
+
+}
+</script>
+
+
+
+<script>
+  const scrapBtn = document.getElementById('scrap-button')
+
+  scrapBtn.onclick = () => {
+    alert('스크랩 버튼이 눌렸어요')
+    scrap()
+  }
+  </script>
+
+<script>
+
+  const scrap = () => {
+    fetch('/scrap', {
+      method: "POST",
+      body: JSON.stringify({post_pk: "{{post.pk}}"})
+    })
+    .then(response => response.json())
+    .then(res => document.getElementById("scrap-count").innerHTML = '스크랩' + res.scrap_count + '개')
+    .then(err => console.error(err))
+  }
+
+
+</script>
+{% endblock content %}
