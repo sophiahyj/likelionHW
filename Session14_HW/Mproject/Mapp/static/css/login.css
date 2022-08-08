@@ -1,0 +1,17 @@
+.login_menu {
+    position: absolute;
+    padding: 20px;
+    width: 400px;
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #006400;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #6B8E23, #9ACD32);
+}

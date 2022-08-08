@@ -1,0 +1,25 @@
+* {
+    font-family: 'Bitter', serif;
+    background-color: #f8f9fa;
+}
+
+.navbar {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around; 
+   align-items: center;
+   margin-top: 20px;
+}
+
+.logo {
+    width: 300px;
+    height: 140px;
+}
+
+.navbar_home {
+    font-size: 30px;
+}
+
+.login {
+    font-size: 25px;
+}

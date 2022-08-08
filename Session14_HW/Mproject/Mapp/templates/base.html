@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter&family=Nanum+Myeongjo&family=Noto+Serif+KR:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    {% block css %} {% endblock css %}
+    <title>모리파</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar_home">
+            <a href="{% url 'home' %}">Home</a>
+        </div>
+
+        <div class="navbar_logo">
+            <img class="logo" src="../static/img/logo.png" alt="모리파">
+        </div>
+
+        <div class="login">
+            {% if user.is_authenticated %}
+            <span class="navbar_hi">안녕하세요, {{user.username}}님!</span>
+            <br>
+            <a class="navbar_logout"><a href="{% url 'logout' %}">Logout</a></a>
+            {% else %}
+            <a class="navbar_login"><a href="{% url 'login' %}">Login</a></a>
+            <br>
+            <a class="navbar_signup">
+              <a href="{% url 'signup' %}">SignUp</a>
+            </a>
+            {% endif %}
+        </div>
+
+    </div>
+    {% block title %} {% endblock %} {% block content %} {% endblock content %}
+</body>
+</html>

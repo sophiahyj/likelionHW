@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block css %} {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/signup.css' %}" />
+{% endblock css %}
+
+{% block content %}
+<div class="signup_menu" style="margin-top: 50px;">
+    <section id="signup">
+        <form method="POST">
+            {% csrf_token %}
+            {% if error %}
+            <p>{{ error }}</p>
+            {% endif %}
+            <h2 style="color: purple;">SignUp</h2>
+            <input style="margin-top: 30px; color: purple;" type="text" name="username" placeholder="ID" />
+            <br>
+            <input style="margin-top: 30px; color: purple;" type="password" name="password" placeholder="Password" />
+            <br>
+            <button style="margin-top: 30px; margin-bottom: 50px;" class="signup_btn">SignUp</button>
+        </form>
+    </section>
+</div>
+{% endblock %}

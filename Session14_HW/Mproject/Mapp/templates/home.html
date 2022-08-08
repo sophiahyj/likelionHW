@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% block css %} {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+{% endblock css %} {% block content %}
+
+<div class="main_menu">
+    <a class="rectangle1" href="{% url 'book' %}">
+        <p class="book_icon">📖</p>
+        <p class="book_menu" >Book</p>
+    </a>
+    <a class="rectangle2" href="{% url 'movie' %}">
+        <p class="movie_icon">🎬</p>
+        <p class="movie_menu">Movie</p>
+    </a>
+    <a class="rectangle3" href="{% url 'drama' %}">
+        <p class="drama_icon">👥</p>
+        <p class="drama_menu">Act</p>
+    </a>
+</div>
+
+
+{% endblock content %}

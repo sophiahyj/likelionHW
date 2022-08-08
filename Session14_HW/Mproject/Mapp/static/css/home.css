@@ -1,0 +1,54 @@
+.rectangle1, .rectangle2, .rectangle3 {
+    box-sizing: border-box;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 35px;
+    width: 350px;
+    height: 450px;
+    text-decoration-line: none;
+}
+
+.rectangle1 {
+    background: #BBCCE2;
+}
+
+.rectangle2 {
+    background: #E4AFE4;
+}
+
+.rectangle3 {
+    background: #FFD0D7;
+}
+
+.main_menu {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.book_menu, .movie_menu, .drama_menu {
+    text-align: center;
+    font-size: 50px;
+}
+
+.book_menu, .book_icon {
+    color:#3C3C86;
+    background-color: #BBCCE2;
+}
+
+.book_icon, .drama_icon, .movie_icon {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 100px;
+}
+
+.movie_menu, .movie_icon {
+    color:#4B0082;
+    background-color: #E4AFE4;
+}
+
+.drama_menu, .drama_icon {
+    color:#CD5C5C;
+    background-color: #FFD0D7;
+}

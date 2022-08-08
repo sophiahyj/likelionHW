@@ -1,0 +1,43 @@
+{% extends 'base.html' %} {% block css %} {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/book.css' %}">
+{% endblock css %} {% block content %}
+
+<div class="notice">
+    <h2 class="hi" style="text-align: center; font-family: 'Noto Serif KR', serif;">책 읽고 다같이 "모리파"자!😊</h2>
+    <!-- <p style="margin-top:-20px;">새로 책을 사고 싶다면?</p>
+    <p>교보문고 (https://www.kyobobook.co.kr)</p>
+    <p>알라딘 (https://www.aladin.co.kr)</p> -->
+</div>
+
+<div class="modal_container">
+    <div class="modal">
+        <div class="modal_title">
+            <h3>Welcome!</h3>
+            <button class="closemodal_btn" style="border-style: none;"> ❌
+                <!-- <img src="../static/img/close.png" style="height: 10px; width: 10px;"alt="closebtn"> -->
+            </button>
+        </div>
+        <article class="modal_content" style="font-family: 'Noto Serif KR', serif;">
+            😺안녕하세요! 이곳은 모리파의 책장입니다😺 <br>
+            책을 읽고 자유롭게 대화해주세요! <br>
+            📍 남을 비방하는 글은 경고 없이 삭제될 수 있습니다.
+        </article>
+    </div>
+    <!-- <button class="modalstop_btn" style="font-family: 'Noto Serif KR', serif;">
+        ✔️오늘 하루 보지 않기
+    </button> -->
+</div>
+<button class="openmodal_btn">모달 열기</button>
+
+
+<h2 class="blist_title">모리파의 책장</h2>
+<a class="booklist" href="#">
+    <img class="bookcover1" src="../static/img/book1.jfif" alt="bookcover1">
+    <div class="bookinfo1">
+        <p style="font-weight:bolder; font-size: larger;">밝은 밤</p>
+        <p>최은영</p>
+        <p>문학동네</p>
+    </div>
+</a>
+<script type="module" src="../static/js/book.js"></script>
+{% endblock content %}

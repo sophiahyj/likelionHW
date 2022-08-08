@@ -1,0 +1,80 @@
+html, body {
+    cursor: url('../img/book.cur'), auto;
+}
+
+.booklist {
+    text-decoration-line: none;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    width: 250px;    
+}
+
+.bookcover1 {
+    height: 250px;
+    width: 180px;
+}
+
+.bookinfo1 {
+    font-size: 15px;
+    color: black;
+    font-family: 'Noto Serif KR', serif;
+}
+
+.blist_title {
+    color:#00008B;
+    font-family: 'Noto Serif KR', serif;
+    font-weight: bolder;
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+
+.modal_container{
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    transition: opacity 0.25s ease;
+    visibility: hidden;
+}
+
+.modal_container.open {
+    visibility: visible;
+}
+
+.modal{
+    position: relative;
+    transition: top 0.25s ease;
+    width: 500px;
+    height: 150px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    margin: auto;
+    overflow: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* .modalstop_btn {
+    color: #696969;
+    margin-top: 20px;
+    border: none;
+} */
+
+.modal_title {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+.modal_content {
+    margin-left: 20px;
+}
